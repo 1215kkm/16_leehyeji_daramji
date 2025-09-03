@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>제목</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="section_box">
+        <section id="section3">
+            <div class="enter-btn-wrap">
+                <div class="particle-container" id="particles"></div>
+                <!-- <button class="enter-btn" onclick="goToSection(2)">입장하기</button> -->
+            </div>
+
+            <img src="images/bg4.png" alt="" class="bg">
+            <div class="daram_box">
+                <img src="images/3.png" alt="" class="daram1">
+                <img src="images/3-2.png" alt="" class="daram2">
+            </div>
+            <div id="particleOverlay" class="particle-container" aria-hidden="true"></div>
+        </section>
+
+
+
+    </div>
+
+    <script src="script/jquery-3.7.1.js"></script>
+    <script src="script/action.js"></script>
+
+    <script>
+        let classNum = 0
+        $(window).keyup(function(e){
+            if(e.key == 'ArrowDown'){
+                classNum++
+                $('#section3 .daram_box').removeClass('on'+(classNum-1))
+                $('#section3 .daram_box').addClass('on'+classNum)
+                console.log(classNum);
+            }
+            if(e.key == 'ArrowUp'){
+                classNum--
+                $('#section3 .daram_box').removeClass('on'+(classNum+1))
+                $('#section3 .daram_box').addClass('on'+classNum)
+                console.log(classNum);
+            }
+        })
+    </script>
+</body>
+
+</html>
