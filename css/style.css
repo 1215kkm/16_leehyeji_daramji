@@ -15,7 +15,7 @@ section {min-width: 1920px;min-height: 1080px; height: 100vh; overflow: hidden; 
 
 .gogogo {}
 .gogogo:hover {position: relative;}
-.gogogo:before {content: ""; position: absolute; }
+.gogogo:before {content: "NEXT"; position: absolute; color: #fff; }
 .gogogo:before {}
 
 
@@ -627,7 +627,7 @@ section img.bg { position: absolute; min-width: 1920px;  top: 0px; left: 0%; }
 
 
 
-#section6 .dotory_pre { position: absolute; top: 800px; left: 1550px; z-index: 16; transition: .3s; transform: rotate(10deg); cursor: pointer;} 
+#section6 .dotory_pre { position: absolute; top: 750px; left: 1650px; z-index: 16; transition: .3s; transform: rotate(10deg); cursor: pointer;} 
 
 
 

@@ -24,7 +24,10 @@
         </section>
 
         <section id="section2">
-            <img src="images/bg3.png" alt="" class="bg">
+            <div class="bg_wrap">
+                <img src="images/bg3.png" alt="" class="bg">
+                <div class="yusung"></div>
+            </div>
             <div class="frame">
                 <figure class="thumb">
                     <figcaption>제목</figcaption>
@@ -57,7 +60,42 @@
 
     <script src="script/jquery-3.7.1.js"></script>
     <script src="script/action.js"></script>
+<script> 
 
+        // 별들 생성
+        function createStars() {
+            const starCount = 150;
+            const container = document.querySelector('.bg_wrap .yusung'); // 
+
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                
+                const size = Math.random() * 3 + 1;
+                star.style.width = size + 'px';
+                star.style.height = size + 'px';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 30 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                star.style.position = "absolute"; // ★ 필요
+                
+                container.appendChild(star);
+            }
+        }
+
+
+        // 초기화
+        function init() {
+            createStars();
+            startMeteorGeneration();
+            
+            // 첫 유성은 바로 생성
+            setTimeout(createMeteor, 1000);
+        }
+
+        // 페이지 로드 시 시작
+        window.addEventListener('load', init);
+    </script>
 </body>
 
 </html>
